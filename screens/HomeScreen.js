@@ -1,10 +1,23 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 
 export default function HomeScreen() {
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.boldText}>This is HomeScreen</Text>
+
+      <View style={styles.nameAndImageContainer}>
+
+        <View style={styles.nameContainer}>
+          <Text>Hi Satish</Text>
+          <Text>Lets Upgrade Your Skill.</Text>
+        </View>
+
+        <View style={styles.profileImageContainer}>
+          <Image source={{ uri: 'https://picsum.photos/150' }} style={styles.profileImage}></Image>
+        </View>
+
+      </View>
+
     </View>
   )
 }
@@ -12,11 +25,29 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#ff0',
-    alignItems:'center'
+    height: '100%',
+    width: '100%',
+    padding: '5%',
+    backgroundColor: '#ECF0F1'
   },
-  boldText: {
-    fontSize: 40,
-    fontWeight: 'bold'
+  nameAndImageContainer: {
+    width: '100%',
+    marginTop: 10,
+    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  nameContainer: {
+    width: '40%'
+  },
+  profileImageContainer: {
+    width: 50,
+    height: 50,
+    borderRadius:25
+  },
+  profileImage: {
+    width: 50,
+    height: 50,
+    borderRadius:25
   }
 })

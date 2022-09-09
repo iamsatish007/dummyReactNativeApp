@@ -7,6 +7,7 @@ export default function Routes() {
   return (
     <View>
       <HomeScreen />
+      {/* <DetailsPage /> */}
     </View>
   )
 }
