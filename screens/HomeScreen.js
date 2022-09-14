@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
 import React from 'react'
 
 export default function HomeScreen() {
@@ -16,6 +16,38 @@ export default function HomeScreen() {
           <Image source={{ uri: 'https://picsum.photos/150' }} style={styles.profileImage}></Image>
         </View>
 
+      </View>
+
+      <View style={styles.scrollviewContainer}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={{ height: 200, width: 300, marginLeft: 25 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300, marginLeft: 25 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300, marginLeft: 25 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300, marginLeft: 25 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+          <View style={{ height: 200, width: 300 }}>
+            <Image source={{ uri: 'https://picsum.photos/250/250' }} style={{ height: 200, width: 300 }}></Image>
+          </View>
+        </ScrollView>
       </View>
 
     </View>
@@ -43,11 +75,14 @@ const styles = StyleSheet.create({
   profileImageContainer: {
     width: 50,
     height: 50,
-    borderRadius:25
+    borderRadius: 25
   },
   profileImage: {
     width: 50,
     height: 50,
-    borderRadius:25
-  }
+    borderRadius: 25
+  },
+  scrollviewContainer: {
+    height: 200
+  },
 })
