@@ -1,8 +1,25 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import MovieCard from '../components/MovieCard'
+import { useNavigation } from '@react-navigation/native'
 
 export default function HomeScreen() {
+
+  const navigation = useNavigation()
+
+  // This is a function. (ES6 Definition)
+  const testFunction = () => {
+    // Alert.alert('This is test alert.')
+    navigation.navigate('Details')
+  }
+
+  // This is also a function.
+  function testFunction2() {
+
+  }
+
+
+
   return (
     <View style={styles.mainContainer}>
 
@@ -12,7 +29,9 @@ export default function HomeScreen() {
 
       <View style={styles.cardContainer}>
         <ScrollView horizontal>
-          <MovieCard></MovieCard>
+          <TouchableOpacity onPress={() => { testFunction() }}>
+            <MovieCard></MovieCard>
+          </TouchableOpacity>
           <MovieCard></MovieCard>
           <MovieCard></MovieCard>
           <MovieCard></MovieCard>
