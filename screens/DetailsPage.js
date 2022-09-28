@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
 
 export default function DetailsPage() {
@@ -23,6 +23,8 @@ export default function DetailsPage() {
       rating: 5.8
     }
   ])
+  const [name, setName] = useState('')
+
 
 
   const increaseNumber = () => {
@@ -35,17 +37,25 @@ export default function DetailsPage() {
 
 
   return (
-    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+    <View>
 
-      <TouchableOpacity onPress={() => { decreaseNumber() }}>
-        <Text style={{ fontSize: 40 }}>-</Text>
-      </TouchableOpacity>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+        <TouchableOpacity onPress={() => { decreaseNumber() }}>
+          <Text style={{ fontSize: 40 }}>-</Text>
+        </TouchableOpacity>
 
-      <Text style={{ fontSize: 25, margin: 20 }}>{number}</Text>
+        <Text style={{ fontSize: 25, margin: 20 }}>{number}</Text>
 
-      <TouchableOpacity onPress={() => { increaseNumber() }}>
-        <Text style={{ fontSize: 40 }}>+</Text>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => { increaseNumber() }}>
+          <Text style={{ fontSize: 40 }}>+</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <Text>Enter Name:</Text>
+        <TextInput value={name} onChangeText={(val) => { setName(val) }} style={{ height: 50, width: 200, borderWidth: 1, borderColor: '#ff0000' }} placeholder='This is placeholder'></TextInput>
+      </View>
+
     </View>
   )
 }
