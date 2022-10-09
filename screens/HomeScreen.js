@@ -32,7 +32,9 @@ export default function HomeScreen() {
           <TouchableOpacity onPress={() => { testFunction() }}>
             <MovieCard></MovieCard>
           </TouchableOpacity>
-          <MovieCard></MovieCard>
+          <TouchableOpacity onPress={() => { navigation.navigate('LoginDemo') }}>
+            <MovieCard></MovieCard>
+          </TouchableOpacity>
           <MovieCard></MovieCard>
           <MovieCard></MovieCard>
           <MovieCard></MovieCard>
